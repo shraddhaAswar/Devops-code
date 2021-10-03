@@ -21,9 +21,9 @@ pipeline {
             }
         }
 		
-		stage('Notifyincation the code') {
+		stage('Notification for code') {
             steps {
-                echo 'Code has been deployed'
+                echo 'Notitying over email'
             }
         }
 		
