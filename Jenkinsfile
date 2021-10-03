@@ -15,6 +15,18 @@ pipeline {
             }
         }
 		
+		stage('Deploying the code') {
+            steps {
+                echo 'Code has been deployed'
+            }
+        }
+		
+		stage('Notifyincation the code') {
+            steps {
+                echo 'Code has been deployed'
+            }
+        }
+		
     }
     post { 
         always { 
