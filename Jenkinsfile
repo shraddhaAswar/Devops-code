@@ -1,15 +1,24 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('Building the code') {
             steps {
-                echo 'Hello World'
+                echo 'Building the code'
+				sh 'mvn clean install'
             }
         }
+		
+		stage('Testing the code') {
+            steps {
+                echo 'Testing the code'
+				sh 'mvn test'
+            }
+        }
+		
     }
     post { 
         always { 
-            echo 'I will always say Hello again!'
+            echo 'Sending email over gmail'
         }
     }
 }
